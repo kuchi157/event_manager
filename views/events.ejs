@@ -1,0 +1,130 @@
+<% if(events.length<3){%>
+  <div class="background">
+<nav
+  class="navbar sticky-top navbar-expand-xl navbar-dark"
+  style="background-color: #020f17;"
+>
+<a class="navbar-brand" href="/dashboard">HUBX</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-4 px-3">
+      <li class="nav-item ">
+        <a class="nav-link" href="/dashboard"
+          >My Dashboard </a
+        >
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/events">Events <span class="sr-only">(current)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/createEvent">Create Event</a>
+      </li>
+    </ul>
+    <a href="/users/logout" class="btn btn_color">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+<h1 class="pt-4 mx-auto white">Events</h1>
+<% if(events.length===0) {%>
+  <h4 class="mx-auto white"> No Event to show. Create an Event</h4> 
+<% } %>
+<% for (var i = 0; i < events.length; i++) { %>
+<p><div class="card">
+  <div class="card-header">
+    <%= events[i].name %>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p><%= events[i].description %></p>
+      <footer class="blockquote-footer">
+        <%= events[i].location %> <p><cite title="Source Title"
+          ><%= events[i].date %></cite
+        ></p>
+      </footer>
+    </blockquote>
+  </div>
+</div></p>
+<p> </p>
+</br>
+<% } %>
+
+</div>
+</div>
+<%} else { %>
+  <div class="background2">
+    <nav
+      class="navbar sticky-top navbar-expand-xl navbar-dark"
+      style="background-color: #020f17;"
+    >
+    <a class="navbar-brand" href="/dashboard">HUBX</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-4 px-3">
+          <li class="nav-item ">
+            <a class="nav-link" href="/dashboard"
+              >My Dashboard </a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/events">Events <span class="sr-only">(current)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/createEvent">Create Event</a>
+          </li>
+        </ul>
+        <a href="/users/logout" class="btn btn_color">Logout</a>
+      </div>
+    </nav>
+    
+    <div class="container">
+    <h1 class="pt-4 mx-auto white">Events</h1>
+    <% for (var i = 0; i < events.length; i++) { %>
+    <p><div class="card">
+      <div class="card-header">
+        <%= events[i].name %>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p><%= events[i].description %></p>
+          <footer class="blockquote-footer">
+            <%= events[i].location %> <p><cite title="Source Title"
+              ><%= events[i].date %></cite
+            ></p>
+          </footer>
+        </blockquote>
+      </div>
+    </div></p>
+    <p> </p>
+  </br>
+    <% } %>
+    
+    </div>
+    </div>
+
+<% } %>
+
+
+

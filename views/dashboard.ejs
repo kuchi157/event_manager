@@ -1,0 +1,40 @@
+<div class="background">
+<nav
+class="navbar sticky-top navbar-expand-xl navbar-dark"
+style="background-color: #020f17;"
+>
+<a class="navbar-brand" href="/dashboard">HUBX</a>
+<button
+  class="navbar-toggler"
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarTogglerDemo02"
+  aria-controls="navbarTogglerDemo02"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-4 px-3">
+    <li class="nav-item active">
+      <a class="nav-link" href="/dashboard"
+        >My Dashboard <span class="sr-only">(current)></a
+      >
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="/events">Events </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/createEvent">Create Event</a>
+    </li>
+  </ul>
+  <a href="/users/logout" class="btn btn_color">Logout</a>
+</div>
+</nav>
+<div class="container">
+  <h1 class="lead pad_top font_large text-center center white">Hello <%= user.name %>, Welcome to HUBX. </h1>
+</div>
+
+</div>
