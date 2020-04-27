@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
 const User = require("../models/User");
-const { forwardAuthenticated } = require("../config/auth");
+const { forwardAuthenticated } = require("../other/auth");
 
 router.get("/login", forwardAuthenticated, (req, res) => {
   res.render("login", { title: "Log in to HUBX | HUBX" });

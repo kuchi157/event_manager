@@ -7,9 +7,9 @@ const session = require("express-session");
 const path = require("path");
 
 const app = express();
-require("./config/keys");
+require("./other/keys");
 
-require("./config/passport")(passport);
+require("./other/passport")(passport);
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
