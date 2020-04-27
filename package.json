@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "./config/dev.env nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "gyanendra priyadarshi",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,7 +22,6 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0",
     "nodemon": "^1.18.9"
   }
 }

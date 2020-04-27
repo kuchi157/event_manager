@@ -7,9 +7,15 @@ const session = require("express-session");
 const path = require("path");
 
 const app = express();
-require("./other/keys");
 
-require("./other/passport")(passport);
+require("./config/passport")(passport);
+
+const db = require("./config/keys").mongoURI;
+
+mongoose
+  .connect(db, { useNewUrlParser: true })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
