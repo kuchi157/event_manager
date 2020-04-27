@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require("passport");
 
 const Event = require("../models/Event");
-const { ensureAuthenticated, forwardAuthenticated } = require("../other/auth");
+const { ensureAuthenticated, forwardAuthenticated } = require("../config/auth");
 
 router.get("/", forwardAuthenticated, (req, res) => {
   res.render("welcome", { title: "HUBX | Welcome to HUBX" });
