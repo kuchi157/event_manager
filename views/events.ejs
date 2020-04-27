@@ -1,5 +1,5 @@
 <% if(events.length<3){%>
-  <div class="background">
+  <div class="background2">
 <nav
   class="navbar sticky-top navbar-expand-xl navbar-dark"
   style="background-color: #020f17;"
@@ -59,7 +59,9 @@
 <p> </p>
 </br>
 <% } %>
-
+<% if(events.length===2) { %>
+  <div style="padding:6rem;"></div>
+<% } %>
 </div>
 </div>
 <%} else { %>
