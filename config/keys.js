@@ -1,5 +1,4 @@
-dbPassword =
-  "mongodb+srv://eventmanager:kuchi157@cluster0-fane2.mongodb.net/test?retryWrites=true";
+dbPassword = "mongodb://127.0.0.1:27017/event-manager"; //Use your Mongodb Atlas key
 
 module.exports = {
   mongoURI: dbPassword,
